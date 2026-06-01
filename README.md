@@ -1,36 +1,40 @@
 # Cover Finder
 
-Una aplicación gráfica para buscar y agregar carátulas (album art) a archivos MP3. Utiliza las APIs de iTunes y Deezer para encontrar automáticamente las portadas de tus canciones.
+Este tutorial está disponible en español aquí:
 
-## Características
+![](README_ES.md)
 
-- **Arrastrar y soltar**: Simplemente arrastra tus archivos MP3 a la aplicación
-- **Búsqueda automática**: Busca carátulas usando iTunes y Deezer APIs
-- **Previsualización**: Muestra las carátulas encontradas antes de guardarlas
-- **Detección de carátulas existentes**: Detecta si un MP3 ya tiene carátula y la muestra
-- **Selección inteligente**: Los archivos con carátula existente aparecen desmarcados por defecto
-- **Filas de altura dinámica**: Las filas se ajustan al tamaño de las carátulas para una mejor visualización
+A graphical application to search and add album art to MP3 files. Uses iTunes and Deezer APIs to automatically find cover art for your songs.
 
-## Requisitos
+## Features
 
-- Python 3.6 o superior
+- **Drag and drop**: Simply drag your MP3 files into the application
+- **Automatic search**: Searches for covers using iTunes and Deezer APIs
+- **Preview**: Shows found covers before saving them
+- **Existing cover detection**: Detects if an MP3 already has a cover and displays it
+- **Smart selection**: Files with existing covers appear unchecked by default
+- **Dynamic row height**: Rows adjust to cover size for better visualization
+
+## Requirements
+
+- Python 3.6 or higher
 - PyQt6
 - requests
 - mutagen
 
-## Instalación
+## Installation
 
 ### Linux
 
-#### Método 1: Ejecutar directamente (recomendado)
+#### Method 1: Run directly (recommended)
 
-1. Asegúrate de tener Python 3 y las dependencias instaladas:
+1. Make sure you have Python 3 and dependencies installed:
 ```bash
 sudo apt update && sudo apt upgrade
 sudo apt install python3-pyqt6 python3-requests python3-mutagen
 ```
 
-2. Ejecuta la aplicación:
+2. Run the application:
 ```bash
 python3 cover_finder.py
 ```
@@ -38,89 +42,89 @@ python3 cover_finder.py
 ![](images/01-mp3-cover-art-manager.png)
 
 
-#### Método 2: Usar pip (para desarrolladores)
+#### Method 2: Use pip (for developers)
 
-1. Instala las dependencias:
+1. Install dependencies:
 ```bash
 pip install PyQt6 requests mutagen
 ```
 
-2. Ejecuta la aplicación:
+2. Run the application:
 ```bash
 python cover_finder.py
 ```
 
 ### Windows
 
-1. Asegúrate de tener Python instalado y en el PATH. Descárgalo desde [python.org](https://www.python.org/downloads/)
+1. Make sure you have Python installed and in PATH. Download it from [python.org](https://www.python.org/downloads/)
 
-2. Abre una terminal (CMD o PowerShell) y navega al directorio donde está `cover_finder.py`
+2. Open a terminal (CMD or PowerShell) and navigate to the directory where `cover_finder.py` is located
 
-3. Instala las dependencias:
+3. Install dependencies:
 ```bash
 pip install PyQt6 requests mutagen
 ```
 
-4. Ejecuta la aplicación:
+4. Run the application:
 ```bash
 python cover_finder.py
 ```
 
-O si tienes Python 3 específicamente:
+Or if you have Python 3 specifically:
 ```bash
 py cover_finder.py
 ```
 
 ### macOS
 
-1. Asegúrate de tener Python 3 instalado. Puedes instalarlo con Homebrew:
+1. Make sure you have Python 3 installed. You can install it with Homebrew:
 ```bash
 brew install python3
 ```
 
-2. Instala las dependencias:
+2. Install dependencies:
 ```bash
 pip3 install PyQt6 requests mutagen
 ```
 
-3. Ejecuta la aplicación:
+3. Run the application:
 ```bash
 python3 cover_finder.py
 ```
 
-## Uso
+## Usage
 
-1. **Agregar archivos MP3**:
-   - Arrastra y suelta archivos MP3 en la zona designada
-   - O haz clic en el botón "⬆ Add MP3 files" para seleccionar archivos
+1. **Add MP3 files**:
+   - Drag and drop MP3 files into the designated area
+   - Or click the "⬆ Add MP3 files" button to select files
 
-2. **Ver carátulas existentes**:
-   - Los archivos que ya tienen carátula se muestran con la imagen y un borde verde
-   - Estos archivos aparecen con el checkbox desmarcado por defecto
+2. **View existing covers**:
+   - Files that already have a cover are shown with the image and a green border
+   - These files appear with the checkbox unchecked by default
 
-3. **Buscar carátulas**:
-   - Haz clic en el botón "🔍 Search Covers" para buscar carátulas automáticamente
-   - El programa buscará en iTunes y Deezer las mejores coincidencias
-   - Las carátulas encontradas se mostrarán en la columna "Cover Preview"
+3. **Search for covers**:
+   - Click the "🔍 Search Covers" button to automatically search for covers
+   - The program will search iTunes and Deezer for the best matches
+   - Found covers will be displayed in the "Cover Preview" column
 
-4. **Seleccionar qué guardar**:
-   - Marca o desmarca los checkboxes según las carátulas que quieras guardar
-   - Usa los botones "Select all" o "Unselect all" para marcar/desmarcar todo
+4. **Select what to save**:
+   - Check or uncheck the checkboxes according to the covers you want to save
+   - Use the "Select all" or "Unselect all" buttons to check/uncheck everything
 
-5. **Guardar carátulas**:
-   - Haz clic en "💾 Save Selected Covers" para guardar las carátulas seleccionadas en los archivos MP3
+5. **Save covers**:
+   - Click "💾 Save Selected Covers" to save the selected covers to the MP3 files
 
-## Notas
+## Notes
 
-- El programa usa un sistema de puntuación para encontrar las mejores coincidencias de carátulas
-- Las filas de la tabla se ajustan automáticamente al tamaño de las carátulas para una mejor visualización
-- Puedes redimensionar la columna "Cover Preview" arrastrando su borde
-- La aplicación se abre maximizada para aprovechar el espacio de pantalla
+- The program uses a scoring system to find the best cover matches
+- Table rows automatically adjust to cover size for better visualization
+- You can resize the "Cover Preview" column by dragging its border
+- The application opens maximized to take advantage of screen space
 
-## Licencia
+## License
 
-Este proyecto es de código abierto y está disponible para uso personal.
+This project is open source and available for personal use.
 
-## Créditos
+## Credits
 
-Desarrollado por Washington Indacochea Delgado
+Developed by Washington Indacochea Delgado
