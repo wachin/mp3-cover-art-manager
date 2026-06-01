@@ -26,15 +26,17 @@ Una aplicación gráfica para buscar y agregar carátulas (album art) a archivos
 
 1. Asegúrate de tener Python 3 y las dependencias instaladas:
 ```bash
-sudo apt update
-sudo apt install python3 python3-pip
-pip3 install PyQt6 requests mutagen
+sudo apt update && sudo apt upgrade
+sudo apt install python3-pyqt6 python3-requests python3-mutagen
 ```
 
 2. Ejecuta la aplicación:
 ```bash
 python3 cover_finder.py
 ```
+
+![](images/01-mp3-cover-art-manager.png)
+
 
 #### Método 2: Usar pip (para desarrolladores)
 
