@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="240" fill="#2bbfa4"/>
+  
+  <!-- Album cover rectangle -->
+  <rect x="156" y="116" width="200" height="200" rx="10" fill="#1a9e87"/>
+  
+  <!-- Album cover inner rectangle -->
+  <rect x="166" y="126" width="180" height="180" rx="5" fill="#fafafa"/>
+  
+  <!-- Music note icon -->
+  <path d="M210 180 L210 280 Q210 300 190 300 Q170 300 170 280 Q170 260 190 260 Q200 260 205 265 L205 180 L310 160 L310 260 Q310 280 290 280 Q270 280 270 260 Q270 240 290 240 Q300 240 305 245 L305 155 L210 175 Z" fill="#2bbfa4"/>
+  
+  <!-- Magnifying glass -->
+  <circle cx="340" cy="340" r="60" fill="none" stroke="#ffffff" stroke-width="12"/>
+  <circle cx="340" cy="340" r="45" fill="none" stroke="#ffffff" stroke-width="8"/>
+  <line x1="385" y1="385" x2="430" y2="430" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+  
+  <!-- Shine effect on magnifying glass -->
+  <path d="M315 315 Q325 305 335 315" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+  
+  <!-- Small sparkle -->
+  <circle cx="180" cy="340" r="8" fill="#ffffff" opacity="0.8"/>
+  <circle cx="380" cy="180" r="6" fill="#ffffff" opacity="0.6"/>
+  <circle cx="140" cy="200" r="4" fill="#ffffff" opacity="0.4"/>
+</svg>
