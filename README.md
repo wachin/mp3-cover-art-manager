@@ -2,7 +2,7 @@
 
 Este tutorial está disponible en español aquí:
 
-![](README_ES.md)
+[](README_ES.md)
 
 A graphical application to search and add album art to MP3 files. Uses iTunes and Deezer APIs to automatically find cover art for your songs.
 
@@ -123,7 +123,7 @@ python3 cover_finder.py
 
 ## License
 
-This project is open source and available for personal use.
+This project is licensed under the GPL 3 License - see the [LICENSE](LICENSE) file for details.
 
 ## Credits
 

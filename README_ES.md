@@ -119,7 +119,7 @@ python3 cover_finder.py
 
 ## Licencia
 
-Este proyecto es de código abierto y está disponible para uso personal.
+Este proyecto está bajo la licencia GPL 3; consulte el archivo [LICENSE](LICENSE) para obtener más detalles.
 
 ## Créditos
 
