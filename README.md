@@ -2,7 +2,7 @@
 
 Este tutorial está disponible en español aquí:
 
-[](README_ES.md)
+[README_ES.md](README_ES.md)
 
 A graphical application to search and add album art to MP3 files. Uses iTunes and Deezer APIs to automatically find cover art for your songs.
 
