@@ -1,0 +1,7 @@
+cover_finder.py usr/bin/
+cover_finder.svg usr/share/pixmaps/
+mp3-cover-art-manager.desktop usr/share/applications/
+cover_art_*.qm usr/share/mp3-cover-art-manager/
+TRANSLATIONS.md usr/share/doc/mp3-cover-art-manager/
+README.md usr/share/doc/mp3-cover-art-manager/
+LICENSE usr/share/doc/mp3-cover-art-manager/

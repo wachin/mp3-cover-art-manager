@@ -1,0 +1,9 @@
+mp3-cover-art-manager (1.0.0-1) unstable; urgency=medium
+
+  * Initial release.
+  * Add support for searching cover art from iTunes and Deezer APIs
+  * Add drag and drop functionality for MP3 files
+  * Add batch processing capabilities
+  * Add internationalization support for English and Spanish
+
+ -- Washington Indacochea Delgado <linuxfrontier@proton.me>  Wed, 03 Jun 2026 11:00:00 -0500

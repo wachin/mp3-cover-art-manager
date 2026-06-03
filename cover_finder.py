@@ -13,7 +13,7 @@ from pathlib import Path
 from urllib.parse import quote_plus
 
 import requests
-from PyQt6.QtCore import Qt, QCoreApplication, QThread, pyqtSignal
+from PyQt6.QtCore import Qt, QCoreApplication, QThread, pyqtSignal, QTranslator, QLocale
 from PyQt6.QtGui import QPixmap, QImage, QDragEnterEvent, QDropEvent, QIcon
 from PyQt6.QtWidgets import (
     QApplication,
@@ -734,6 +734,25 @@ class CoverArtApp(QMainWindow):
 
 def main():
     app = QApplication(sys.argv)
+    
+    # Load translation based on system locale
+    translator = QTranslator()
+    locale = QLocale.system()
+    
+    # Try to load translation for the current locale
+    translation_file = f"cover_art_{locale.name()}.qm"
+    translation_path = Path(__file__).parent / translation_file
+    
+    # If the specific locale translation doesn't exist, try the language only
+    if not translation_path.exists():
+        translation_file = f"cover_art_{locale.language()}.qm"
+        translation_path = Path(__file__).parent / translation_file
+    
+    # Load the translation if found
+    if translation_path.exists():
+        if translator.load(str(translation_path)):
+            app.installTranslator(translator)
+    
     window = CoverArtApp()
     window.show()
     sys.exit(app.exec())

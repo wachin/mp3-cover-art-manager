@@ -1,0 +1,9 @@
+include README.md
+include LICENSE
+include TRANSLATIONS.md
+include cover_finder.svg
+include cover_art_*.ts
+include cover_art_*.qm
+include mp3-cover-art-manager.desktop
+recursive-include debian *
+recursive-include .github *

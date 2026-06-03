@@ -1,0 +1,4 @@
+version=4
+opts="mode=git,pgpmode=none" \
+https://github.com/yourusername/mp3-cover-art-manager.git \
+refs/tags/v(\d+\.\d+\.\d+)

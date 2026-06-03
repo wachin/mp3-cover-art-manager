@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=MP3 Cover Art Manager
+Comment=Search and add album art to MP3 files
+Exec=mp3-cover-art-manager
+Icon=mp3-cover-art-manager
+Terminal=false
+Type=Application
+Categories=Audio;AudioVideo;
+Keywords=mp3;cover;art;album;music;
+StartupNotify=true
