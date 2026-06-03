@@ -31,7 +31,7 @@ A graphical application to search and add album art to MP3 files. Uses iTunes an
 1. Make sure you have Python 3 and dependencies installed:
 ```bash
 sudo apt update && sudo apt upgrade
-sudo apt install python3-pyqt6 python3-requests python3-mutagen
+sudo apt install python3-pyqt6 python3-requests python3-mutagen python3-pyqt6.qtsvg
 ```
 
 2. Run the application:

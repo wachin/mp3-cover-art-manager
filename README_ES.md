@@ -27,7 +27,7 @@ Una aplicación gráfica para buscar y agregar carátulas (album art) a archivos
 1. Asegúrate de tener Python 3 y las dependencias instaladas:
 ```bash
 sudo apt update && sudo apt upgrade
-sudo apt install python3-pyqt6 python3-requests python3-mutagen
+sudo apt install python3-pyqt6 python3-requests python3-mutagen python3-pyqt6.qtsvg
 ```
 
 2. Ejecuta la aplicación:
