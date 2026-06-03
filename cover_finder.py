@@ -34,6 +34,12 @@ from PyQt6.QtWidgets import (
     QProgressBar,
     QDialog,
 )
+
+try:
+    from PyQt6.QtSvg import QSvgWidget
+    SVG_SUPPORT = True
+except ImportError:
+    SVG_SUPPORT = False
 from mutagen.id3 import APIC, ID3, ID3NoHeaderError
 from mutagen.mp3 import MP3
 
@@ -463,10 +469,22 @@ class CoverArtApp(QMainWindow):
         
         icon_path = Path(__file__).parent / "cover_finder.svg"
         if icon_path.exists():
-            pixmap = QPixmap(str(icon_path))
-            if not pixmap.isNull():
+            if SVG_SUPPORT:
+                try:
+                    svg_widget = QSvgWidget(str(icon_path))
+                    svg_widget.setFixedSize(200, 200)
+                    icon_layout.addWidget(svg_widget)
+                except Exception:
+                    # Fallback if SVG widget fails
+                    icon_label = QLabel()
+                    icon_label.setText("🎵")
+                    icon_label.setStyleSheet("font-size: 100px;")
+                    icon_layout.addWidget(icon_label)
+            else:
+                # Fallback if SVG support is not available
                 icon_label = QLabel()
-                icon_label.setPixmap(pixmap.scaled(200, 200, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation))
+                icon_label.setText("🎵")
+                icon_label.setStyleSheet("font-size: 100px;")
                 icon_layout.addWidget(icon_label)
         else:
             # Fallback if icon doesn't exist
@@ -741,12 +759,12 @@ def main():
     
     # Try to load translation for the current locale
     translation_file = f"cover_art_{locale.name()}.qm"
-    translation_path = Path(__file__).parent / translation_file
+    translation_path = Path(__file__).parent / "translations" / translation_file
     
     # If the specific locale translation doesn't exist, try the language only
     if not translation_path.exists():
         translation_file = f"cover_art_{locale.language()}.qm"
-        translation_path = Path(__file__).parent / translation_file
+        translation_path = Path(__file__).parent / "translations" / translation_file
     
     # Load the translation if found
     if translation_path.exists():

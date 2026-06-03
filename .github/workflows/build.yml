@@ -48,7 +48,7 @@ jobs:
     - name: Copy translation files
       run: |
         mkdir -p dist/translations
-        cp cover_art_*.qm dist/translations/ || true
+        cp translations/cover_art_*.qm dist/translations/ || true
 
     - name: Create archive (Linux)
       if: matrix.platform == 'linux'

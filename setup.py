@@ -47,7 +47,7 @@ setup(
     include_package_data=True,
     data_files=[
         ("share/pixmaps", ["cover_finder.svg"]),
-        ("share/mp3-cover-art-manager", ["cover_art_en.qm", "cover_art_es.qm"]),
+        ("share/mp3-cover-art-manager/translations", ["translations/cover_art_en.qm", "translations/cover_art_es.qm"]),
         ("share/doc/mp3-cover-art-manager", ["README.md", "LICENSE", "TRANSLATIONS.md"]),
     ],
 )

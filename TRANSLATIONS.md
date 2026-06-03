@@ -6,10 +6,10 @@ This application supports internationalization using Qt Linguist. The following 
 
 ## Translation Files
 
-- `cover_art_en.ts` - English translation source file
-- `cover_art_es.ts` - Spanish translation source file
-- `cover_art_en.qm` - Compiled English translation (binary)
-- `cover_art_es.qm` - Compiled Spanish translation (binary)
+- `translations/cover_art_en.ts` - English translation source file
+- `translations/cover_art_es.ts` - Spanish translation source file
+- `translations/cover_art_en.qm` - Compiled English translation (binary)
+- `translations/cover_art_es.qm` - Compiled Spanish translation (binary)
 
 ## How to Use Qt Linguist
 
@@ -17,7 +17,7 @@ This application supports internationalization using Qt Linguist. The following 
 
 1. Open Qt Linguist:
    ```bash
-   linguist cover_art_es.ts
+   linguist translations/cover_art_es.ts
    ```
 
 2. Or open it from your system's application menu.
@@ -38,15 +38,15 @@ This application supports internationalization using Qt Linguist. The following 
 1. Save your changes in Qt Linguist (File → Save)
 2. Compile the translation file to create the `.qm` file:
    ```bash
-   lrelease cover_art_es.ts
+   lrelease translations/cover_art_es.ts
    ```
-3. This will generate `cover_art_es.qm` which the application uses at runtime
+3. This will generate `translations/cover_art_es.qm` which the application uses at runtime
 
 ## Adding a New Language
 
 1. Copy an existing `.ts` file:
    ```bash
-   cp cover_art_en.ts cover_art_fr.ts
+   cp translations/cover_art_en.ts translations/cover_art_fr.ts
    ```
 2. Edit the new file and change the language attribute in the header:
    ```xml
@@ -55,7 +55,7 @@ This application supports internationalization using Qt Linguist. The following 
 3. Open the file in Qt Linguist and translate all strings
 4. Compile the new translation:
    ```bash
-   lrelease cover_art_fr.ts
+   lrelease translations/cover_art_fr.ts
    ```
 5. The application will automatically load the translation based on the system locale
 
@@ -65,13 +65,13 @@ If you add new translatable strings to the code:
 
 1. Update the `.ts` files:
    ```bash
-   pylupdate6 -ts cover_art_en.ts cover_art_es.ts cover_finder.py
+   pylupdate6 -ts translations/cover_art_en.ts translations/cover_art_es.ts cover_finder.py
    ```
 2. Open the updated `.ts` files in Qt Linguist
 3. Translate the new strings
 4. Recompile:
    ```bash
-   lrelease cover_art_en.ts cover_art_es.ts
+   lrelease translations/cover_art_en.ts translations/cover_art_es.ts
    ```
 
 ## Testing Translations
@@ -90,10 +90,11 @@ To test a specific translation without changing your system locale:
 ```
 mp3-cover-art-manager/
 ├── cover_finder.py          # Main application
-├── cover_art_en.ts          # English translation source
-├── cover_art_es.ts          # Spanish translation source
-├── cover_art_en.qm          # Compiled English translation
-├── cover_art_es.qm          # Compiled Spanish translation
+├── translations/            # Translation files folder
+│   ├── cover_art_en.ts      # English translation source
+│   ├── cover_art_es.ts      # Spanish translation source
+│   ├── cover_art_en.qm      # Compiled English translation
+│   └── cover_art_es.qm      # Compiled Spanish translation
 └── TRANSLATIONS.md          # This file
 ```
 
@@ -104,3 +105,4 @@ mp3-cover-art-manager/
 - Always keep the `.ts` files as they are the source for translations
 - The application automatically detects the system locale and loads the appropriate translation
 - If a translation for the current locale is not found, the application will use the default English strings
+- Translation files are organized in the `translations/` folder for better project structure
