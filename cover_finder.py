@@ -328,6 +328,11 @@ class CoverArtApp(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle(APP_NAME)
+
+        icon_path = Path(__file__).parent / "cover_finder.svg"
+        if icon_path.exists():
+            self.setWindowIcon(QIcon(str(icon_path)))
+
         self.showMaximized()
         self.setAcceptDrops(True)
         self.files = []
@@ -752,6 +757,10 @@ class CoverArtApp(QMainWindow):
 
 def main():
     app = QApplication(sys.argv)
+
+    icon_path = Path(__file__).parent / "cover_finder.svg"
+    if icon_path.exists():
+        app.setWindowIcon(QIcon(str(icon_path)))
     
     # Load translation based on system locale
     translator = QTranslator()
